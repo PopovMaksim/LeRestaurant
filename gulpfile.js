@@ -31,6 +31,6 @@ gulp.task('sass', function () {
  });
 
  gulp.task('default', gulp.series(
-     gulp.parallel('pug','sass','tinypng'),
+     gulp.parallel('pug','sass'),
      gulp.parallel('watch')
      ));

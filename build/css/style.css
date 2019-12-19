@@ -1,30 +1,102 @@
-h1 {
-  color: red; }
+@import "https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap";
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0; }
 
-p {
-  color: green; }
-
-i {
-  background-color: yellow; }
-
-div {
-  display: -webkit-box;
-  display: flex; }
-
-.test {
-  display: grid; }
-
-.sdfgs {
-  display: -webkit-box;
-  display: flex; }
-
-.safa {
-  display: -webkit-box;
-  display: flex;
-  -webkit-transition: 2s;
-  transition: 2s;
-  -webkit-transform: rotate(60deg);
-          transform: rotate(60deg); }
-
-.haha {
-  color: red; }
+#typeoffood {
+  position: relative; }
+  #typeoffood .typefood {
+    height: 100vh;
+    position: relative; }
+    #typeoffood .typefood section:first-child {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
+      height: inherit; }
+      #typeoffood .typefood section:first-child section {
+        width: 50%;
+        z-index: 1; }
+      #typeoffood .typefood section:first-child .food-meat {
+        background: url(../img/meat.jpg) no-repeat center/cover; }
+      #typeoffood .typefood section:first-child .food-secrets {
+        background: url(../img/secrets.jpg) no-repeat center/cover; }
+    #typeoffood .typefood .food-vegeterian {
+      position: absolute;
+      top: 0;
+      left: 18%;
+      height: inherit;
+      width: 45%;
+      background: url(../img/vegetarian.jpg) no-repeat center/cover;
+      z-index: 2;
+      border-right: 3px solid #f1ac11;
+      border-left: 3px solid #f1ac11;
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+      -webkit-transform: skewX(-18deg);
+              transform: skewX(-18deg); }
+  #typeoffood .typefood-nameplate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 3; }
+    #typeoffood .typefood-nameplate .nameplate {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+              align-items: center;
+      text-align: center;
+      position: relative;
+      font-size: calc(0.5rem + 1vw);
+      -webkit-transition: 1s;
+      transition: 1s;
+      padding: 1em 2.5em; }
+      #typeoffood .typefood-nameplate .nameplate::before {
+        content: "";
+        background: radial-gradient(circle at 1em 1em, transparent 1em, white 1em) -1em -1em;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        opacity: .3;
+        -webkit-transition: .4s;
+        transition: .4s;
+        z-index: 4; }
+      #typeoffood .typefood-nameplate .nameplate h2 {
+        font-size: 1.3em;
+        text-transform: uppercase;
+        margin: 0.5em;
+        z-index: 5; }
+      #typeoffood .typefood-nameplate .nameplate .fullmenu {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.5em;
+        color: #000000;
+        background-color: #f1ac11;
+        border-radius: 3px;
+        padding: 0.5em 2em;
+        opacity: .5;
+        z-index: 5; }
+        #typeoffood .typefood-nameplate .nameplate .fullmenu:hover {
+          opacity: 1; }
+      #typeoffood .typefood-nameplate .nameplate:nth-child(1) {
+        left: 4%; }
+      #typeoffood .typefood-nameplate .nameplate:nth-child(2) {
+        top: -6%; }
+      #typeoffood .typefood-nameplate .nameplate:nth-child(3) {
+        right: 4%; }
+      #typeoffood .typefood-nameplate .nameplate:hover::before {
+        opacity: .7; }

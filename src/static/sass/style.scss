@@ -1,26 +1,112 @@
-h1 { 
-    color: red;
+@import "https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap";
+
+$c-yellow: #f1ac11;
+$c-black: #000000;
+$c-white: #ffffff;
+$c-gray: #c2c2c2;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
-p {
-    color: green;
-}
-i {
-    background-color: yellow;
-}
-div {
-    display: flex;
-}
-.test {
-    display: grid;
-}
-.sdfgs {
-    display: flex;
-}
-.safa {
-    display: flex;
-    transition: 2s;
-    transform: rotate(60deg);
-}
-.haha {
-    color: red;
+
+#typeoffood {
+    position: relative;
+    .typefood {
+        height: 100vh;
+        position: relative;
+        section:first-child {
+            display: flex;
+            justify-content: space-between;
+            height: inherit;
+            section {
+                width: 50%;
+                z-index: 1;
+            }
+            .food-meat {
+                background: url(../img/meat.jpg) no-repeat center /cover;
+            }
+            .food-secrets {
+                background: url(../img/secrets.jpg) no-repeat center /cover;
+            }
+        }
+        .food-vegeterian {
+            position: absolute;
+	        top: 0;
+	        left: 18%;
+	        height: inherit;
+	        width: 45%;
+	        background: url(../img/vegetarian.jpg) no-repeat center /cover;
+	        z-index: 2;
+	        border-right: 3px solid $c-yellow;
+	        border-left: 3px solid $c-yellow;
+	        transform-origin: 0% 100%;
+	        transform: skewX(-18deg);
+        }
+    }
+    .typefood-nameplate {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        .nameplate {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            font-size: calc(0.5rem + 1vw);
+            transition: 1s;
+            padding: 1em 2.5em;
+            &::before {
+                content: "";
+	            background: radial-gradient(circle at 1em 1em, transparent 1em, rgb(255, 255, 255) 1em) -1em -1em;
+	            width: 100%;
+	            height: 100%;
+	            position: absolute;
+	            top: 0;
+	            opacity: .3;
+	            transition: .4s;
+	            z-index: 4;
+            }
+            h2 {
+                font-size: 1.3em;
+	            text-transform: uppercase;
+	            margin: 0.5em;
+	            z-index: 5;
+            }
+            .fullmenu {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 0.5em;
+                color: $c-black;
+                background-color: $c-yellow;
+                border-radius: 3px;
+                padding: 0.5em 2em;
+                opacity: .5;
+                z-index: 5;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            &:nth-child(1) {
+                left: 4%;
+            }
+            &:nth-child(2) {
+                top: -6%;
+            }
+            &:nth-child(3) {
+                right: 4%;
+            }
+            &:hover::before {
+                opacity: .7;
+            }
+        } 
+    }
 }

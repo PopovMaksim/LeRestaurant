@@ -110,3 +110,55 @@ body {
         } 
     }
 }
+
+#navigation {
+    position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+	width: 72.5%;
+	top: 0;
+	left: 0;
+	font-size: calc(0.5rem + 1vw);
+	font-style: italic;
+    margin: 1.5em 2em; 
+    .logo {
+        font-size: 0.7em;
+        font-weight: 500;
+        padding: 0.7em 3.5em;
+        background: radial-gradient(circle at 0.7em 0.7em, transparent 0.7em, $c-yellow 0.7em) -0.7em -0.7em;
+    }
+    .nav {
+        display: flex;
+        font-size: 0.7em;
+        font-weight: 700;
+        li {
+            list-style: none;
+            margin-left: calc(1em + 5vw);
+            a {
+                color: $c-white;
+                text-decoration: none;
+                text-transform: uppercase;
+                position: relative;
+                transition: .5s;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -0.5em;
+                    left: 0;
+                    width: 0%;
+                    height: 3px;
+                    background-color: $c-yellow;
+                    transition: cubic-bezier(0,.2,.35,.49) .3s
+                }
+                &:hover {
+                    color: $c-yellow;
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

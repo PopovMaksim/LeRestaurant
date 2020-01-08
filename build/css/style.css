@@ -150,3 +150,121 @@ body {
           color: #f1ac11; }
           #navigation .nav li a:hover::after {
             width: 100%; }
+
+#dailymenu {
+  font-size: calc(0.5rem + 0.5vw); }
+  #dailymenu h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.3em;
+    font-weight: 400;
+    font-style: italic;
+    color: #f1ac11; }
+  #dailymenu .daily-menu {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    flex-wrap: wrap;
+    width: 55%;
+    min-width: 920px;
+    margin: 0 auto; }
+    #dailymenu .daily-menu .menu-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-areas: "image headline" "image allergens";
+      width: 40%;
+      margin: 1.2em 2.4em;
+      cursor: pointer; }
+      #dailymenu .daily-menu .menu-item p, #dailymenu .daily-menu .menu-item h4 {
+        margin: 0;
+        background-color: #fff;
+        bottom: -5px; }
+      #dailymenu .daily-menu .menu-item img {
+        grid-area: image;
+        margin-right: 1em; }
+      #dailymenu .daily-menu .menu-item .title-price {
+        grid-area: headline;
+        margin-bottom: 0.5em; }
+        #dailymenu .daily-menu .menu-item .title-price .item-left {
+          font-weight: 400;
+          text-transform: uppercase; }
+        #dailymenu .daily-menu .menu-item .title-price .price {
+          font-size: 0.8em;
+          font-weight: 700;
+          padding: 0.33em 0.52em;
+          background: radial-gradient(circle at 0.4em 0.4em, #ffffff 0.4em, #f1ac11 0.4em) -0.4em -0.4em; }
+      #dailymenu .daily-menu .menu-item .allergens {
+        grid-area: allergens;
+        margin-bottom: 1em;
+        border-bottom: 2px dotted #c2c2c2;
+        font-size: 0.8em;
+        font-style: italic;
+        color: #c2c2c2; }
+      #dailymenu .daily-menu .menu-item .title-price, #dailymenu .daily-menu .menu-item .allergens {
+        border-bottom: 2px dotted #000000;
+        position: relative;
+        padding: 0; }
+      #dailymenu .daily-menu .menu-item .item-left {
+        position: absolute;
+        padding-right: 0.4em; }
+      #dailymenu .daily-menu .menu-item .item-right {
+        position: absolute;
+        right: 0;
+        padding-left: 0.4em; }
+  #dailymenu .dish {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    margin: 3em auto;
+    position: relative;
+    overflow: hidden; }
+    #dailymenu .dish .dish-image {
+      background: url("../img/meatt.jpg") no-repeat center/cover; }
+    #dailymenu .dish .dish-description {
+      padding: 0 3.5em 1.5em 2em; }
+      #dailymenu .dish .dish-description h5 {
+        text-transform: uppercase;
+        font-size: 1.4em;
+        font-weight: 400;
+        font-style: italic; }
+      #dailymenu .dish .dish-description p {
+        font-size: 0.8em;
+        font-style: italic;
+        color: #c2c2c2;
+        margin-bottom: 2em; }
+      #dailymenu .dish .dish-description span {
+        font-size: 0.8em;
+        font-style: italic;
+        text-decoration: none;
+        color: #000000;
+        padding: 0.5em 1.5em;
+        background-color: #f1ac11;
+        border-radius: 2px;
+        border-bottom: 2px solid #b47d00; }
+    #dailymenu .dish .dish-border {
+      width: 100%;
+      height: 100%;
+      border: 2px solid #f6f6f6;
+      position: absolute;
+      overflow: hidden;
+      box-sizing: border-box; }
+    #dailymenu .dish .dish-angle {
+      position: absolute;
+      background-color: #ffffff;
+      border: 2px solid #f6f6f6;
+      border-radius: 50%;
+      width: 5em;
+      height: 5em; }
+    #dailymenu .dish .angle1 {
+      top: -2.5em;
+      left: -2.5em; }
+    #dailymenu .dish .angle2 {
+      top: -2.5em;
+      right: -2.5em; }
+    #dailymenu .dish .angle3 {
+      bottom: -2.5em;
+      left: -2.5em; }
+    #dailymenu .dish .angle4 {
+      bottom: -2.5em;
+      right: -2.5em; }

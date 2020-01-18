@@ -212,28 +212,28 @@ body {
         position: absolute;
         right: 0;
         padding-left: 0.4em; }
-  #dailymenu .dish {
+  #dailymenu .detailed-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 50%;
     margin: 3em auto;
     position: relative;
     overflow: hidden; }
-    #dailymenu .dish .dish-image {
+    #dailymenu .detailed-menu .dish-image {
       background: url("../img/meatt.jpg") no-repeat center/cover; }
-    #dailymenu .dish .dish-description {
+    #dailymenu .detailed-menu .dish-description {
       padding: 0 3.5em 1.5em 2em; }
-      #dailymenu .dish .dish-description h5 {
+      #dailymenu .detailed-menu .dish-description h5 {
         text-transform: uppercase;
         font-size: 1.4em;
         font-weight: 400;
         font-style: italic; }
-      #dailymenu .dish .dish-description p {
+      #dailymenu .detailed-menu .dish-description p {
         font-size: 0.8em;
         font-style: italic;
         color: #c2c2c2;
         margin-bottom: 2em; }
-      #dailymenu .dish .dish-description span {
+      #dailymenu .detailed-menu .dish-description span {
         font-size: 0.8em;
         font-style: italic;
         text-decoration: none;
@@ -242,29 +242,29 @@ body {
         background-color: #f1ac11;
         border-radius: 2px;
         border-bottom: 2px solid #b47d00; }
-    #dailymenu .dish .dish-border {
+    #dailymenu .detailed-menu .dish-border {
       width: 100%;
       height: 100%;
       border: 2px solid #f6f6f6;
       position: absolute;
       overflow: hidden;
       box-sizing: border-box; }
-    #dailymenu .dish .dish-angle {
+    #dailymenu .detailed-menu .dish-angle {
       position: absolute;
       background-color: #ffffff;
       border: 2px solid #f6f6f6;
       border-radius: 50%;
       width: 5em;
       height: 5em; }
-    #dailymenu .dish .angle1 {
+    #dailymenu .detailed-menu .angle1 {
       top: -2.5em;
       left: -2.5em; }
-    #dailymenu .dish .angle2 {
+    #dailymenu .detailed-menu .angle2 {
       top: -2.5em;
       right: -2.5em; }
-    #dailymenu .dish .angle3 {
+    #dailymenu .detailed-menu .angle3 {
       bottom: -2.5em;
       left: -2.5em; }
-    #dailymenu .dish .angle4 {
+    #dailymenu .detailed-menu .angle4 {
       bottom: -2.5em;
       right: -2.5em; }

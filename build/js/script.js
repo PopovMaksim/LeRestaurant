@@ -1,4 +1,3 @@
-// let pr;
 let meat = {
     img: 'meatt.jpg',
     heading: 'Raw meat with BBQ',
@@ -42,42 +41,31 @@ function showDish() {
     let descriptionDish = fullDish.getElementsByClassName('description-content')[0];
     let priceDish = fullDish.getElementsByClassName('dish-price')[0];
 
+    function slideDish(dish, pr) {
+        imageDish.style.backgroundImage = 'url("img/' + dish.img + '")';
+        headingDish.textContent = dish.heading;
+        descriptionDish.textContent = dish.description;
+        priceDish.textContent = pr;
+    }
+
     switch (nameDish) {
         case 'meat':
-            imageDish.style.backgroundImage = 'url("img/' + meat.img + '")';
-            headingDish.textContent = meat.heading;
-            descriptionDish.textContent = meat.description;
-            priceDish.textContent = price + ' - ORDER';
+            slideDish(meat, price);
             break;
         case 'trout':
-            imageDish.style.backgroundImage = 'url("img/' + fish.img + '")';
-            headingDish.textContent = fish.heading;
-            descriptionDish.textContent = fish.description;
-            priceDish.textContent = price + ' - ORDER';
+            slideDish(fish, price);
             break;
         case 'soup':
-            imageDish.style.backgroundImage = 'url("img/' + soup.img + '")';
-            headingDish.textContent = soup.heading;
-            descriptionDish.textContent = soup.description;
-            priceDish.textContent = price + ' - ORDER';
+            slideDish(soup, price);
             break;
         case 'chicken':
-            imageDish.style.backgroundImage = 'url("img/' + chicken.img + '")';
-            headingDish.textContent = chicken.heading;
-            descriptionDish.textContent = chicken.description;
-            priceDish.textContent = price + ' - ORDER';
+            slideDish(chicken, price);
             break;
         case 'pasta':
-            imageDish.style.backgroundImage = 'url("img/' + spaghetti.img + '")';
-            headingDish.textContent = spaghetti.heading;
-            descriptionDish.textContent = spaghetti.description;
-            priceDish.textContent = price + ' - ORDER';
+            slideDish(spaghetti, price);
             break;
         case 'salad':
-            imageDish.style.backgroundImage = 'url("img/' +salad.img + '")';
-            headingDish.textContent = salad.heading;
-            descriptionDish.textContent = salad.description;
-            priceDish.textContent = price + ' - ORDER';
+            slideDish(salad, price);
             break;       
         default: 
             break;

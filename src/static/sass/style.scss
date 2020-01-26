@@ -357,3 +357,69 @@ body {
         }
     }
 }
+
+#footer {
+	background: url(../img/bg-footer.jpg) no-repeat center /cover;
+	font-style: italic;
+	font-size: calc(0.5rem + 0.5vw);
+    padding: 3em;
+    .foot {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        ul {
+            margin: 0;
+            list-style: none;
+            
+            .foot-item {
+                font-size: .9em;
+                a {
+                    text-decoration: none;
+                    color: #bbbbbb;
+                    transition: .1s;
+                    &:hover {
+                        color: $c-white;
+                    }
+                }
+            }
+        }
+        .foot-head {
+            color: $c-white;
+            font-size: 1.2em;
+            margin: 0 0 1.55em;
+        }
+        .foot-formhead {
+            margin: 0 1em 1.55em;
+        }
+        .foot-formmail {
+            font-family: 'Roboto', sans-serif;
+            font-style: italic;
+            color: $c-white;
+            padding: 0.7em;
+            background-color: rgba(255, 255, 255, 0.42);
+            border: none;
+            position: relative;
+            top: 1px;
+            width: 55%;
+            margin-right: 1.5em;
+            &::placeholder {
+                color: $c-white;
+                opacity: 1;
+            }	
+        }
+        .foot-formbutton {
+            border: none;
+            border-bottom: 2px solid #b47d00;
+            border-radius: 2px;
+            background-color: $c-yellow;
+            padding: 0.7em 2em;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-style: italic;
+            font-family: inherit;
+            cursor: pointer;
+        }
+    }
+}

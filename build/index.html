@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.0.6" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>LeRestaurant</title>
   </head>
   <body>
@@ -120,7 +121,8 @@
           <section class="wherefind-location">
             <h1 class="where-logo">LeRestaurant</h1>
             <p>Hršpic 128<br>Pardubice, 530 01</p>
-          </section><a class="wherefind-showmap" href="#">Show on a map</a>
+          </section><a class="wherefind-showmap fancybox" href="#inline1">Show on a map</a>
+          <div id="inline1"></div>
         </section>
       </div>
     </main>
@@ -154,6 +156,9 @@
         </form>
       </section>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="http://yandex.st/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.7"></script>
+    <script src="http://api-maps.yandex.ru/2.0/?load=package.full&amp;lang=ru-RU" type="text/javascript"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

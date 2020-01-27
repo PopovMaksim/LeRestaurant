@@ -3,7 +3,8 @@ html
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel='stylesheet', href='css/style.css')
+        link(rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.0.6" media="screen")
+        link(rel='stylesheet' type="text/css" href='css/style.css')
         title LeRestaurant
 
     body
@@ -117,7 +118,8 @@ html
                             | Hršpic 128
                             br
                             | Pardubice, 530 01
-                    a(href="#" class="wherefind-showmap") Show on a map
+                    a(href="#inline1" class="wherefind-showmap fancybox") Show on a map
+                    div(id="inline1")
 
         footer(id="footer")
             section(class="foot")
@@ -155,5 +157,8 @@ html
                     p(class="foot-head foot-formhead") Sign up to our newsletter
                     input(type="email" placeholder="E-MAIL ADDRESS" class="foot-formmail")
                     input(type="submit" value="Sign up" class="foot-formbutton")
-        
-        script(src='js/script.js')
+
+        script(src="http://yandex.st/jquery/1.9.1/jquery.min.js")
+        script(type="text/javascript" src="source/jquery.fancybox.js?v=2.1.7")
+        script(src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript")
+        script(type="text/javascript" src="js/script.js")

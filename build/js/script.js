@@ -75,3 +75,38 @@ function showDish() {
 document.querySelectorAll('.menu-item').forEach(function (item) {
     item.addEventListener('click', showDish, false);
 })
+
+
+
+ymaps.ready(function  () {
+ 
+    var myMap;
+     
+        $('.fancybox').fancybox({height:600,afterShow : function() {
+     
+            myMap = new ymaps.Map('inline1', {
+                        center: [56.3241,44.0014],
+                        zoom: 15,
+                        behaviors: ["scrollZoom","drag"]
+                    });	
+     
+        var myPlacemark = new ymaps.Placemark([56.3241,44.0014], {
+                        // Свойства
+                        iconContent: 'Нижегородский театр драмы',
+                        balloonContentHeader: '<strong>Нижегородский государственный академический театр драмы имени М. Горького</strong>',
+                        balloonContentBody: 'ул. Большая Покровская, д. 13',
+                        balloonContentFooter: 'Сайт: <a rel="nofollow" href="http://www.drama.nnov.ru/" target="_blank">http://www.drama.nnov.ru</a>'
+                    }, {
+                        // Опции
+                        preset: 'twirl#redStretchyIcon',
+                        balloonMaxWidth: 250
+                    });
+     
+                // Добавляем метку на карту
+                myMap.geoObjects.add(myPlacemark);			
+     
+        }, afterClose:function (){
+            myMap.destroy();		
+            myMap = null;
+        }});
+    });

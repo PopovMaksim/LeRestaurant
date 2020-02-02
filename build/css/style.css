@@ -166,8 +166,6 @@ body {
     -webkit-box-pack: center;
             justify-content: center;
     flex-wrap: wrap;
-    width: 55%;
-    min-width: 920px;
     margin: 0 auto; }
     #dailymenu .daily-menu .menu-item {
       display: grid;
@@ -358,7 +356,6 @@ body {
       border: none;
       position: relative;
       top: 1px;
-      width: 55%;
       margin-right: 1.5em; }
       #footer .foot .foot-formmail::-webkit-input-placeholder {
         color: #ffffff;
@@ -391,3 +388,57 @@ body {
   width: 700px;
   height: 600px;
   display: none; }
+
+@media screen and (max-width: 1280px) {
+  #typeoffood .typefood .food-vegeterian {
+    left: 14%; }
+  #typeoffood .typefood-nameplate .nameplate {
+    padding: 1em 1.5em; }
+    #typeoffood .typefood-nameplate .nameplate:nth-child(1) {
+      top: -15%; }
+    #typeoffood .typefood-nameplate .nameplate:nth-child(2) {
+      top: 0%; }
+    #typeoffood .typefood-nameplate .nameplate:nth-child(3) {
+      top: 15%; }
+  #footer .foot {
+    width: 100%; } }
+
+@media screen and (min-width: 1280px) {
+  #footer .foot {
+    min-width: 1200px; } }
+
+@media screen and (max-width: 1024px) {
+  #navigation {
+    width: auto; }
+  html {
+    font-size: 20px; }
+  #dailymenu .detailed-menu {
+    width: 60%; }
+  #wherefind .wherefind {
+    width: 40%; } }
+
+@media screen and (min-width: 1024px) {
+  #dailymenu .daily-menu {
+    width: 55%;
+    min-width: 920px; } }
+
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 24px; }
+  #typeoffood .typefood .food-vegeterian {
+    left: 6%; }
+  #dailymenu .daily-menu .menu-item {
+    width: 70%; }
+  #dailymenu .detailed-menu {
+    width: 90%; }
+  #wherefind .wherefind {
+    width: 80%; }
+  #footer .foot {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center; }
+    #footer .foot ul {
+      padding: 1em 0;
+      width: 40%; } }

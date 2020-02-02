@@ -177,8 +177,6 @@ body {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        width: 55%;
-        min-width: 920px;
         margin: 0 auto;
         .menu-item {
             display: grid;
@@ -402,7 +400,6 @@ body {
             border: none;
             position: relative;
             top: 1px;
-            width: 55%;
             margin-right: 1.5em;
             &::placeholder {
                 color: $c-white;
@@ -428,4 +425,88 @@ body {
     width:700px;
     height:600px;
     display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+    #typeoffood {
+        .typefood .food-vegeterian {
+            left: 14%;
+        }
+        .typefood-nameplate .nameplate {
+            padding: 1em 1.5em;
+            &:nth-child(1) {
+                top: -15%;
+            }
+            &:nth-child(2) {
+                top: 0%;
+            }
+            &:nth-child(3) {
+                top: 15%;
+            }
+        }
+    }
+    #footer .foot {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #footer .foot {
+        min-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #navigation {
+        width: auto;
+    }
+    html {
+        font-size: 20px;
+    }
+
+    #dailymenu .detailed-menu {
+        width: 60%;
+    }
+    #wherefind .wherefind {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #dailymenu .daily-menu {
+        width: 55%;
+        min-width: 920px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    html {
+        font-size: 24px;
+    }
+    #typeoffood .typefood .food-vegeterian {
+        left: 6%;
+    }
+    #dailymenu {
+        .daily-menu .menu-item {
+            width: 70%;
+        }
+        .detailed-menu {
+            width: 90%;
+        }
+    }
+    #wherefind .wherefind {
+        width: 80%;
+    }
+    #footer .foot {
+        flex-direction: column;
+        align-items: center;
+        ul {
+            padding: 1em 0;
+            width: 40%;
+        }
+    }
 }

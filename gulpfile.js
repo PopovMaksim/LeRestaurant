@@ -1,8 +1,9 @@
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     pug = require('gulp-pug'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    imagemin = require('gulp-tinypng');
+    imagemin = require('gulp-tinypng'),
+	ghPages = require('gulp-gh-pages');
 
 gulp.task('pug', function () {
     return gulp.src('src/pug/pages/*.pug')
@@ -29,6 +30,11 @@ gulp.task('sass', function () {
     gulp.watch('src/pug/**/*.pug', gulp.series('pug'))
     gulp.watch('src/static/sass/**/*.scss', gulp.series('sass'));
  });
+
+gulp.task('deploy', function() {
+    return gulp.src('./build/**/*')
+      .pipe(ghPages());
+});
 
  gulp.task('default', gulp.series(
      gulp.parallel('pug','sass'),
